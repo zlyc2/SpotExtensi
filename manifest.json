@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "SPOT UPI - Custom Theme & Wallpaper",
+  "version": "4.0",
+  "description": "Tema UI modern, Dark Mode, dan Custom Wallpaper untuk SPOT UPI.",
+  "content_scripts": [
+    {
+      "matches": ["*://spot.upi.edu/*"],
+      "css": ["style.css"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

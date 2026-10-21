@@ -1,0 +1,625 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Lora:wght@500;600;700&family=Nunito:wght@400;600;700&family=Merriweather:wght@400;700&family=Source+Sans+3:wght@400;600;700&family=Orbitron:wght@500;700&family=Rajdhani:wght@500;600;700&display=swap");
+/* =========================================================
+   SPOT UPI - MASTER CSS (THEME, HUD, MODAL, OVERRIDES)
+   ========================================================= */
+
+/* 1. BACKGROUND GLOBAL (Dasarnya adalah Cyberpunk) */
+html body, html body #page-wrapper, html body .page-wrapper, html body #wrapper {
+    background-color: #050a14 !important;
+    background-image: radial-gradient(circle at 20% 50%, rgba(0, 240, 255, 0.03) 0%, transparent 40%), radial-gradient(circle at 80% 20%, rgba(255, 59, 59, 0.03) 0%, transparent 40%) !important;
+    color: #b0c4de !important;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* 2. HEADER & SIDEBAR BASE */
+header, .navbar-header, .navbar-default, .top-left-part, .topbar { background: linear-gradient(90deg, #4a0000 0%, #110000 20%, rgba(5, 10, 20, 0.9) 50%) !important; border-bottom: 2px solid #ff3b3b !important; box-shadow: 0 0 20px rgba(255, 59, 59, 0.3) !important; }
+.navbar-top-links > li > a, .top-left-part a { color: #e2e8f0 !important; }
+.navbar-top-links > li > a:hover { color: #00f0ff !important; background: transparent !important; text-shadow: 0 0 8px #00f0ff !important; }
+.btn-danger, .bg-danger { background: #ff3b3b !important; color: #fff !important; border: none !important; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px) !important; }
+.sidebar, .left-aside, .sidebar-nav { background-color: #03060c !important; border-right: 1px solid rgba(0, 240, 255, 0.2) !important; }
+.sidebar-nav ul, .sidebar-nav ul li, .sidebar-nav ul li.active, .sidebar-nav ul li:hover, #side-menu, #side-menu li, #side-menu li.active { background-color: transparent !important; background: transparent !important; border: none !important; }
+
+/* 3. PROFIL & MENU KIRI BASE */
+.user-profile .profile-image img, .profile-img img { border: 3px solid transparent !important; outline: 2px solid #00f0ff !important; outline-offset: 4px !important; box-shadow: 0 0 15px #00f0ff, inset 0 0 20px #00f0ff !important; border-radius: 50% !important; background: #050a14 !important; }
+.user-profile .profile-text { color: #fff !important; font-weight: bold !important; letter-spacing: 1px !important; }
+.sidebar-nav ul#side-menu li a { color: #8da5c7 !important; background: rgba(0, 30, 60, 0.4) !important; margin: 8px 16px !important; padding: 12px 15px !important; clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px) !important; border-left: 3px solid #00f0ff !important; transition: all 0.3s ease !important; outline: none !important; box-shadow: none !important; display: block !important; }
+.sidebar-nav ul#side-menu li a * { background-color: transparent !important; }
+.sidebar-nav ul#side-menu li a.active, .sidebar-nav ul#side-menu li a:hover { background: rgba(80, 0, 0, 0.6) !important; color: #ffffff !important; border-left: 3px solid #ff3b3b !important; text-shadow: 0 0 5px #ff3b3b !important; }
+.sidebar-nav ul#side-menu li a.active i, .sidebar-nav ul#side-menu li a:hover i { color: #ff3b3b !important; }
+.sidebar-nav ul#side-menu li a:focus, .sidebar-nav ul#side-menu li a:active { background: rgba(0, 255, 100, 0.5) !important; color: #ffffff !important; box-shadow: 0 0 15px rgba(0, 255, 100, 0.3) !important; }
+.sidebar-nav ul#side-menu li a .waves-ripple, .waves-effect .waves-ripple { display: none !important; }
+
+/* 4. KONTEN & TABEL BASE */
+.white-box, .panel { background: transparent !important; border: none !important; box-shadow: none !important; margin-top: 10px !important; }
+.box-title, h1, h2, h3, h4, h5 { color: #fff !important; font-weight: 700 !important; letter-spacing: 1px !important;}
+.table { border-collapse: separate !important; border-spacing: 0 15px !important; }
+.table thead th { border: none !important; background: transparent !important; color: #8da5c7 !important; text-transform: uppercase !important; font-size: 11px !important; }
+html body #wrapper .table-striped > tbody > tr:nth-of-type(odd), html body #wrapper .table-striped > tbody > tr:nth-of-type(odd) > td, html body #wrapper .table > tbody > tr, html body #wrapper .table > tbody > tr > td { background-color: transparent !important; border: none !important; }
+html body #wrapper .table > tbody > tr { background-color: rgba(5, 15, 30, 0.7) !important; clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px) !important; transition: all 0.3s ease !important; position: relative !important; }
+html body #wrapper .table > tbody > tr td { padding: 18px 15px !important; vertical-align: middle !important; color: #e2e8f0 !important; }
+html body #wrapper .table > tbody > tr:nth-child(odd) td { border-top: 1px solid rgba(255, 59, 59, 0.3) !important; border-bottom: 1px solid rgba(255, 59, 59, 0.3) !important; }
+html body #wrapper .table > tbody > tr:nth-child(odd) td:first-child { border-left: 4px solid #ff3b3b !important; }
+html body #wrapper .table > tbody > tr:nth-child(odd) td:last-child { border-right: 1px solid rgba(255, 59, 59, 0.3) !important; }
+html body #wrapper .table > tbody > tr:nth-child(even) td { border-top: 1px solid rgba(0, 240, 255, 0.3) !important; border-bottom: 1px solid rgba(0, 240, 255, 0.3) !important; }
+html body #wrapper .table > tbody > tr:nth-child(even) td:first-child { border-left: 4px solid #00f0ff !important; }
+html body #wrapper .table > tbody > tr:nth-child(even) td:last-child { border-right: 1px solid rgba(0, 240, 255, 0.3) !important; }
+html body #wrapper .table-hover > tbody > tr:hover, html body #wrapper .table > tbody > tr:hover, html body #wrapper .table-hover > tbody > tr:hover > td, html body #wrapper .table > tbody > tr:hover > td, html body #wrapper .table > tbody > tr:focus, html body #wrapper .table > tbody > tr:active, html body #wrapper table.dataTable tbody tr:hover, html body #wrapper table.dataTable tbody tr:hover > td { background: rgba(0, 255, 100, 0.05) !important; background-color: rgba(0, 255, 100, 0.05) !important; color: #ffffff !important; clip-path: polygon(15px 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%, 0 15px) !important; }
+html body #wrapper .table > tbody > tr:hover *, html body #wrapper .table-hover > tbody > tr:hover *, html body #wrapper .table > tbody > tr:focus *, html body #wrapper .table > tbody > tr:active * { background-color: transparent !important; }
+.table tbody td a { font-weight: bold !important; text-decoration: none !important; letter-spacing: 0.5px !important; }
+html body #wrapper .table tbody tr:nth-child(odd) td a { color: #ff5555 !important; }
+html body #wrapper .table tbody tr:nth-child(even) td a { color: #55ccff !important; }
+html body #wrapper .table > tbody > tr:nth-child(odd):hover td a { color: #ff5555 !important; text-shadow: 0 0 8px #ff5555 !important; }
+html body #wrapper .table > tbody > tr:nth-child(even):hover td a { color: #55ccff !important; text-shadow: 0 0 8px #55ccff !important; }
+.label, .badge { background: rgba(0, 20, 40, 0.8) !important; border: 1px solid currentColor !important; border-radius: 4px !important; padding: 4px 8px !important; font-weight: normal !important; }
+html body #wrapper .table tbody tr:nth-child(odd) .label { color: #ff5555 !important; }
+html body #wrapper .table tbody tr:nth-child(even) .label { color: #55ccff !important; }
+footer, .footer { color: #475569 !important; background: transparent !important; border-top: none !important; }
+
+/* 5. TOMBOL, WALLPAPER & MODAL UI */
+#custom-bg-btn, #custom-theme-btn { position: fixed !important; left: 20px !important; z-index: 9999 !important; background: rgba(0, 240, 255, 0.1) !important; color: #00f0ff !important; border: 1px solid #00f0ff !important; padding: 10px 15px !important; font-size: 11px !important; font-weight: bold !important; text-transform: uppercase !important; cursor: pointer !important; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px) !important; transition: all 0.3s ease !important; }
+#custom-bg-btn { bottom: 20px !important; }
+#custom-theme-btn { bottom: 65px !important; background: rgba(255, 59, 59, 0.1) !important; color: #ff3b3b !important; border-color: #ff3b3b !important; }
+#custom-bg-btn:hover { background: rgba(0, 240, 255, 0.4) !important; color: #fff !important; }
+#custom-theme-btn:hover { background: rgba(255, 59, 59, 0.4) !important; color: #fff !important; }
+#custom-bg-reset { position: fixed !important; bottom: 20px !important; left: 150px !important; z-index: 9999 !important; background: rgba(255, 59, 59, 0.1) !important; color: #ff3b3b !important; border: 1px solid #ff3b3b !important; padding: 10px 15px !important; font-size: 11px !important; cursor: pointer !important; clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px) !important; display: none; transition: all 0.3s ease !important; }
+#custom-bg-reset:hover { background: rgba(255, 59, 59, 0.4) !important; color: #fff !important; }
+html body.has-custom-bg, html body.has-custom-bg #page-wrapper, html body.has-custom-bg .page-wrapper, html body.has-custom-bg #wrapper { background-image: var(--custom-bg) !important; background-size: cover !important; background-position: center !important; background-attachment: fixed !important; }
+html body.has-custom-bg .sidebar, html body.has-custom-bg .left-aside { background-color: rgba(3, 6, 12, 0.65) !important; backdrop-filter: blur(8px) !important; border-right: 1px solid rgba(0, 240, 255, 0.1) !important; }
+#theme-modal-overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(4px); z-index: 10000; display: none; justify-content: center; align-items: center; }
+#theme-modal-modern { background: #ffffff; border-radius: 16px; padding: 32px; width: 750px; max-width: 95%; box-shadow: 0 20px 40px rgba(0,0,0,0.2); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-height: 90vh; overflow-y: auto; }
+.tm-header h2 { color: #111827 !important; font-size: 28px !important; font-weight: 800 !important; margin: 0 0 8px 0 !important; border: none !important;}
+.tm-header p { color: #6b7280 !important; font-size: 14px !important; margin: 0 0 24px 0 !important; font-weight: 400 !important; }
+.tm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.tm-card { border-radius: 12px; border: 1px solid transparent; padding: 16px 16px 0 16px; position: relative; cursor: pointer; overflow: hidden; transition: all 0.2s ease; }
+.tm-card.tm-light { background: #ffffff; border-color: #e5e7eb; color: #111827; }
+.tm-card.tm-dark { background: #2b2d31; color: #ffffff; }
+.tm-card.tm-warm { background: #8c6244; color: #ffffff; }
+.tm-card.tm-classic { background: #5a6f87; color: #ffffff; }
+.tm-card.tm-cyberpunk { background: #050a14; border: 1px solid #ff3b3b; color: #00f0ff; grid-column: span 2; }
+.tm-card.selected { outline: 2px solid #0f172a; outline-offset: 2px; }
+.tm-card.tm-dark.selected { outline-color: #ffffff; }
+.tm-card.tm-cyberpunk.selected { outline: 2px solid #00f0ff; outline-offset: 2px; }
+.tm-radio { position: absolute; right: 16px; top: 16px; width: 22px; height: 22px; border-radius: 50%; border: 1px solid currentColor; opacity: 0.4; display: flex; align-items: center; justify-content: center; }
+.tm-card.selected .tm-radio { opacity: 1; }
+.tm-card.selected .tm-radio::after { content: '✔'; font-size: 12px; }
+.tm-card-content { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.tm-icon { font-size: 24px; }
+.tm-text h4 { margin: 0 !important; font-size: 16px !important; font-weight: 700 !important; color: currentColor !important; border: none !important; }
+.tm-text span { font-size: 12px; opacity: 0.8; font-weight: normal !important;}
+.tm-preview { height: 90px; background: rgba(0,0,0,0.05); border-radius: 8px 8px 0 0; display: flex; padding: 10px; gap: 10px; border: 1px solid rgba(0,0,0,0.05); border-bottom: none; }
+.tm-light .tm-preview { background: #f8fafc; border-color: #e5e7eb; }
+.tm-dark .tm-preview { background: #1e2024; }
+.tm-warm .tm-preview { background: #efe3d5; }
+.tm-classic .tm-preview { background: #3b4b5d; }
+.tm-cyberpunk .tm-preview { background: #0b0e14; border-color: rgba(0, 240, 255, 0.2); }
+.tm-p-side { width: 30px; border-radius: 6px; background: currentColor; opacity: 0.1; }
+.tm-cyberpunk .tm-p-side { background: #00f0ff; opacity: 0.2; }
+.tm-p-main { flex: 1; display: flex; flex-direction: column; gap: 8px; }
+.tm-p-top { height: 35px; border-radius: 6px; background: currentColor; opacity: 0.15; }
+.tm-light .tm-p-top { background: #3b82f6; opacity: 1; } 
+.tm-warm .tm-p-top { background: #644431; opacity: 1; } 
+.tm-cyberpunk .tm-p-top { background: #ff3b3b; opacity: 0.8; }
+.tm-p-bot { display: flex; gap: 8px; flex: 1; }
+.tm-p-b1 { flex: 2; border-radius: 6px; background: currentColor; opacity: 0.1; }
+.tm-p-b2 { flex: 1; border-radius: 6px; background: currentColor; opacity: 0.15; }
+.tm-cyberpunk .tm-p-b1, .tm-cyberpunk .tm-p-b2 { background: #00f0ff; opacity: 0.3; }
+.tm-footer { display: flex; justify-content: flex-end; gap: 12px; border-top: 1px solid #e5e7eb; padding-top: 20px; margin-top: 10px;}
+.tm-footer button { padding: 10px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; border: none; transition: 0.2s; font-family: inherit; }
+#btn-cancel-theme { background: #f3f4f6; color: #374151; }
+#btn-cancel-theme:hover { background: #e5e7eb; }
+#btn-ok-theme { background: #0f172a; color: #ffffff; }
+#btn-ok-theme:hover { background: #1e293b; }
+
+
+/* ==============================================================
+   OVERRIDE TEMA (MEMAKSA SELURUH ELEMEN UI BERUBAH)
+   ============================================================== */
+
+/* Reset elemen palsu penyebab kotak hitam pada menu */
+html body[class*="theme-"]:not(.theme-cyberpunk) .sidebar-nav ul#side-menu li a::before,
+html body[class*="theme-"]:not(.theme-cyberpunk) .sidebar-nav ul#side-menu li a::after {
+    display: none !important; background: transparent !important;
+}
+
+/* --- TEMA TERANG --- */
+html body.theme-terang, html body.theme-terang #page-wrapper, html body.theme-terang .page-wrapper, html body.theme-terang #wrapper, html body.theme-terang .white-box { background-color: #f3f4f6 !important; background-image: none !important; color: #1f2937 !important; }
+/* HEADER FIX */
+html body.theme-terang header, html body.theme-terang .topbar, html body.theme-terang .sidebar, html body.theme-terang .left-aside, html body.theme-terang .navbar-header, html body.theme-terang .navbar-default, html body.theme-terang .top-left-part { background-color: #ffffff !important; background-image: none !important; border-color: #e5e7eb !important; border-bottom: 1px solid #e5e7eb !important; box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important; }
+html body.theme-terang .navbar-top-links > li > a, html body.theme-terang .top-left-part a, html body.theme-terang .box-title, html body.theme-terang h1, html body.theme-terang h2, html body.theme-terang h3, html body.theme-terang h4, html body.theme-terang h5, html body.theme-terang .user-profile .profile-text { color: #111827 !important; text-shadow: none !important; }
+/* MENU FIX */
+html body.theme-terang .sidebar-nav ul#side-menu li { background: transparent !important; }
+html body.theme-terang .sidebar-nav ul#side-menu li a { background: transparent !important; background-image: none !important; color: #4b5563 !important; border-left: 3px solid transparent !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important; }
+html body.theme-terang .sidebar-nav ul#side-menu li a.active, html body.theme-terang .sidebar-nav ul#side-menu li a:hover { background-color: #eff6ff !important; background-image: none !important; color: #2563eb !important; border-left: 4px solid #2563eb !important; text-shadow: none !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-terang .sidebar-nav ul#side-menu li a.active i, html body.theme-terang .sidebar-nav ul#side-menu li a:hover i { color: #2563eb !important; }
+html body.theme-terang #wrapper .table > tbody > tr { background-color: #ffffff !important; border: 1px solid #e5e7eb !important; clip-path: none !important; border-radius: 8px !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;}
+html body.theme-terang #wrapper .table > tbody > tr td { color: #374151 !important; border-top: 1px solid #e5e7eb !important; border-bottom: 1px solid #e5e7eb !important; border-left: none !important; border-right: none !important;}
+html body.theme-terang #wrapper .table > tbody > tr:nth-child(odd) td, html body.theme-terang #wrapper .table > tbody > tr:nth-child(even) td { border-left: none !important; border-right: none !important; border-top: 1px solid #e5e7eb !important; border-bottom: 1px solid #e5e7eb !important; }
+html body.theme-terang #wrapper .table-hover > tbody > tr:hover, html body.theme-terang #wrapper .table-hover > tbody > tr:hover > td { background-color: #f9fafb !important; color: #111827 !important; clip-path: none !important; }
+html body.theme-terang #wrapper .table tbody td a, html body.theme-terang #wrapper .table > tbody > tr:hover td a { color: #2563eb !important; text-shadow: none !important; }
+html body.theme-terang .user-profile .profile-image img { border-color: #e5e7eb !important; outline-color: #2563eb !important; box-shadow: none !important; background: #fff !important; }
+html body.theme-terang #wrapper .label { background: #e5e7eb !important; color: #1f2937 !important; border: none !important; }
+html body.theme-terang .btn-danger { background: #2563eb !important; color: #fff !important; clip-path: none !important; border-radius: 8px !important; }
+html body.theme-terang #custom-theme-btn, html body.theme-terang #custom-bg-btn { background: #fff !important; color: #2563eb !important; border-color: #e5e7eb !important; clip-path: none !important; border-radius: 8px !important; box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;}
+
+/* --- TEMA GELAP --- */
+html body.theme-gelap, html body.theme-gelap #page-wrapper, html body.theme-gelap .page-wrapper, html body.theme-gelap #wrapper, html body.theme-gelap .white-box { background-color: #111827 !important; background-image: none !important; color: #d1d5db !important; }
+/* HEADER FIX */
+html body.theme-gelap header, html body.theme-gelap .topbar, html body.theme-gelap .sidebar, html body.theme-gelap .left-aside, html body.theme-gelap .navbar-header, html body.theme-gelap .navbar-default, html body.theme-gelap .top-left-part { background-color: #1f2937 !important; background-image: none !important; border-color: #374151 !important; border-bottom: 1px solid #374151 !important; box-shadow: none !important; }
+html body.theme-gelap .navbar-top-links > li > a, html body.theme-gelap .top-left-part a, html body.theme-gelap .box-title, html body.theme-gelap h1, html body.theme-gelap h2, html body.theme-gelap h3, html body.theme-gelap h4, html body.theme-gelap h5, html body.theme-gelap .user-profile .profile-text { color: #f3f4f6 !important; text-shadow: none !important; }
+/* MENU FIX */
+html body.theme-gelap .sidebar-nav ul#side-menu li { background: transparent !important; }
+html body.theme-gelap .sidebar-nav ul#side-menu li a { background: transparent !important; background-image: none !important; color: #9ca3af !important; border-left: 3px solid transparent !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important; }
+html body.theme-gelap .sidebar-nav ul#side-menu li a.active, html body.theme-gelap .sidebar-nav ul#side-menu li a:hover { background-color: #374151 !important; background-image: none !important; color: #ffffff !important; border-left: 4px solid #60a5fa !important; text-shadow: none !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-gelap .sidebar-nav ul#side-menu li a.active i, html body.theme-gelap .sidebar-nav ul#side-menu li a:hover i { color: #60a5fa !important; }
+html body.theme-gelap #wrapper .table > tbody > tr { background-color: #1f2937 !important; border: 1px solid #374151 !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-gelap #wrapper .table > tbody > tr td { color: #d1d5db !important; border-top: 1px solid #374151 !important; border-bottom: 1px solid #374151 !important; border-left: none !important; border-right: none !important;}
+html body.theme-gelap #wrapper .table > tbody > tr:nth-child(odd) td, html body.theme-gelap #wrapper .table > tbody > tr:nth-child(even) td { border-left: none !important; border-right: none !important; border-top: 1px solid #374151 !important; border-bottom: 1px solid #374151 !important; }
+html body.theme-gelap #wrapper .table-hover > tbody > tr:hover, html body.theme-gelap #wrapper .table-hover > tbody > tr:hover > td { background-color: #374151 !important; color: #ffffff !important; clip-path: none !important; }
+html body.theme-gelap #wrapper .table tbody td a, html body.theme-gelap #wrapper .table > tbody > tr:hover td a { color: #60a5fa !important; text-shadow: none !important; }
+html body.theme-gelap .user-profile .profile-image img { border-color: #374151 !important; outline-color: #60a5fa !important; box-shadow: none !important; background: #1f2937 !important; }
+html body.theme-gelap #wrapper .label { background: #374151 !important; color: #d1d5db !important; border: none !important; }
+html body.theme-gelap .btn-danger { background: #374151 !important; color: #fff !important; border: 1px solid #60a5fa !important; clip-path: none !important; border-radius: 8px !important; }
+html body.theme-gelap #custom-theme-btn, html body.theme-gelap #custom-bg-btn { background: #1f2937 !important; color: #60a5fa !important; border-color: #374151 !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+
+/* --- TEMA HANGAT --- */
+html body.theme-hangat, html body.theme-hangat #page-wrapper, html body.theme-hangat .page-wrapper, html body.theme-hangat #wrapper, html body.theme-hangat .white-box { background-color: #f4ece1 !important; background-image: none !important; color: #5c4b3a !important; }
+/* HEADER FIX */
+html body.theme-hangat header, html body.theme-hangat .topbar, html body.theme-hangat .sidebar, html body.theme-hangat .left-aside, html body.theme-hangat .navbar-header, html body.theme-hangat .navbar-default, html body.theme-hangat .top-left-part { background-color: #e8d5c4 !important; background-image: none !important; border-color: #d4bba3 !important; border-bottom: 1px solid #d4bba3 !important; box-shadow: none !important; }
+html body.theme-hangat .navbar-top-links > li > a, html body.theme-hangat .top-left-part a, html body.theme-hangat .box-title, html body.theme-hangat h1, html body.theme-hangat h2, html body.theme-hangat h3, html body.theme-hangat h4, html body.theme-hangat h5, html body.theme-hangat .user-profile .profile-text { color: #3d2f23 !important; text-shadow: none !important; }
+/* MENU FIX */
+html body.theme-hangat .sidebar-nav ul#side-menu li { background: transparent !important; }
+html body.theme-hangat .sidebar-nav ul#side-menu li a { background: transparent !important; background-image: none !important; color: #7a634d !important; border-left: 3px solid transparent !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-hangat .sidebar-nav ul#side-menu li a.active, html body.theme-hangat .sidebar-nav ul#side-menu li a:hover { background-color: #d4bba3 !important; background-image: none !important; color: #3d2f23 !important; border-left: 4px solid #8c6244 !important; text-shadow: none !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-hangat .sidebar-nav ul#side-menu li a.active i, html body.theme-hangat .sidebar-nav ul#side-menu li a:hover i { color: #8c6244 !important; }
+html body.theme-hangat #wrapper .table > tbody > tr { background-color: #ffffff !important; border: 1px solid #d4bba3 !important; clip-path: none !important; border-radius: 8px !important; box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;}
+html body.theme-hangat #wrapper .table > tbody > tr td { color: #5c4b3a !important; border-top: 1px solid #d4bba3 !important; border-bottom: 1px solid #d4bba3 !important; border-left: none !important; border-right: none !important;}
+html body.theme-hangat #wrapper .table > tbody > tr:nth-child(odd) td, html body.theme-hangat #wrapper .table > tbody > tr:nth-child(even) td { border-left: none !important; border-right: none !important; border-top: 1px solid #d4bba3 !important; border-bottom: 1px solid #d4bba3 !important; }
+html body.theme-hangat #wrapper .table-hover > tbody > tr:hover, html body.theme-hangat #wrapper .table-hover > tbody > tr:hover > td { background-color: #f0e3d4 !important; color: #3d2f23 !important; clip-path: none !important; }
+html body.theme-hangat #wrapper .table tbody td a, html body.theme-hangat #wrapper .table > tbody > tr:hover td a { color: #8c6244 !important; text-shadow: none !important; }
+html body.theme-hangat .user-profile .profile-image img { border-color: #d4bba3 !important; outline-color: #8c6244 !important; box-shadow: none !important; background: #fff !important; }
+html body.theme-hangat #wrapper .label { background: #d4bba3 !important; color: #5c4b3a !important; border: none !important; }
+html body.theme-hangat .btn-danger { background: #8c6244 !important; color: #fff !important; clip-path: none !important; border-radius: 8px !important; }
+html body.theme-hangat #custom-theme-btn, html body.theme-hangat #custom-bg-btn { background: #e8d5c4 !important; color: #8c6244 !important; border-color: #d4bba3 !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+
+/* --- TEMA KLASIK --- */
+html body.theme-klasik, html body.theme-klasik #page-wrapper, html body.theme-klasik .page-wrapper, html body.theme-klasik #wrapper, html body.theme-klasik .white-box { background-color: #3b4d61 !important; background-image: none !important; color: #cbd5e1 !important; }
+/* HEADER FIX */
+html body.theme-klasik header, html body.theme-klasik .topbar, html body.theme-klasik .sidebar, html body.theme-klasik .left-aside, html body.theme-klasik .navbar-header, html body.theme-klasik .navbar-default, html body.theme-klasik .top-left-part { background-color: #2c3a4a !important; background-image: none !important; border-color: #1e293b !important; border-bottom: 1px solid #1e293b !important; box-shadow: none !important; }
+html body.theme-klasik .navbar-top-links > li > a, html body.theme-klasik .top-left-part a, html body.theme-klasik .box-title, html body.theme-klasik h1, html body.theme-klasik h2, html body.theme-klasik h3, html body.theme-klasik h4, html body.theme-klasik h5, html body.theme-klasik .user-profile .profile-text { color: #f8fafc !important; text-shadow: none !important; }
+/* MENU FIX */
+html body.theme-klasik .sidebar-nav ul#side-menu li { background: transparent !important; }
+html body.theme-klasik .sidebar-nav ul#side-menu li a { background: transparent !important; background-image: none !important; color: #94a3b8 !important; border-left: 3px solid transparent !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-klasik .sidebar-nav ul#side-menu li a.active, html body.theme-klasik .sidebar-nav ul#side-menu li a:hover { background-color: #1e293b !important; background-image: none !important; color: #ffffff !important; border-left: 4px solid #38bdf8 !important; text-shadow: none !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-klasik .sidebar-nav ul#side-menu li a.active i, html body.theme-klasik .sidebar-nav ul#side-menu li a:hover i { color: #38bdf8 !important; }
+html body.theme-klasik #wrapper .table > tbody > tr { background-color: #2c3a4a !important; border: 1px solid #1e293b !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+html body.theme-klasik #wrapper .table > tbody > tr td { color: #cbd5e1 !important; border-top: 1px solid #1e293b !important; border-bottom: 1px solid #1e293b !important; border-left: none !important; border-right: none !important;}
+html body.theme-klasik #wrapper .table > tbody > tr:nth-child(odd) td, html body.theme-klasik #wrapper .table > tbody > tr:nth-child(even) td { border-left: none !important; border-right: none !important; border-top: 1px solid #1e293b !important; border-bottom: 1px solid #1e293b !important; }
+html body.theme-klasik #wrapper .table-hover > tbody > tr:hover, html body.theme-klasik #wrapper .table-hover > tbody > tr:hover > td { background-color: #1e293b !important; color: #ffffff !important; clip-path: none !important; }
+html body.theme-klasik #wrapper .table tbody td a, html body.theme-klasik #wrapper .table > tbody > tr:hover td a { color: #38bdf8 !important; text-shadow: none !important; }
+html body.theme-klasik .user-profile .profile-image img { border-color: #1e293b !important; outline-color: #38bdf8 !important; box-shadow: none !important; background: #2c3a4a !important; }
+html body.theme-klasik #wrapper .label { background: #1e293b !important; color: #cbd5e1 !important; border: none !important; }
+html body.theme-klasik .btn-danger { background: #1e293b !important; color: #fff !important; border: 1px solid #38bdf8 !important; clip-path: none !important; border-radius: 8px !important; }
+html body.theme-klasik #custom-theme-btn, html body.theme-klasik #custom-bg-btn { background: #2c3a4a !important; color: #38bdf8 !important; border-color: #1e293b !important; clip-path: none !important; border-radius: 8px !important; box-shadow: none !important;}
+
+
+/* ==============================================================
+   SUPER FIX V3: PENGHANCUR TOTAL KOTAK HITAM MENU
+   ============================================================== */
+
+/* 1. Menembak langsung jantung elemen <li> aktif dengan spesifitas maksimal */
+html body #wrapper .sidebar .sidebar-nav ul#side-menu > li,
+html body #wrapper .sidebar .sidebar-nav ul#side-menu > li.active,
+html body .sidebar .sidebar-nav ul#side-menu > li,
+html body .sidebar .sidebar-nav ul#side-menu > li.active,
+ul#side-menu > li,
+ul#side-menu > li.active {
+    background-color: transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 2. Mematikan semua elemen "gaib" (pseudo-elements) yang sering menggambar kotak hitam */
+html body #wrapper .sidebar-nav ul#side-menu li::before,
+html body #wrapper .sidebar-nav ul#side-menu li::after,
+html body #wrapper .sidebar-nav ul#side-menu li.active::before,
+html body #wrapper .sidebar-nav ul#side-menu li.active::after,
+html body #wrapper .sidebar-nav ul#side-menu li a::before,
+html body #wrapper .sidebar-nav ul#side-menu li a::after {
+    display: none !important;
+    content: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 3. Memastikan tombol birumu melayang di atas tanpa gangguan */
+html body .sidebar-nav ul#side-menu li a {
+    display: block !important;
+    margin: 8px 16px !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ==============================================================
+   SUPER FIX V4: HAPUS BLOK HITAM MENU & SESUAIKAN DENGAN TEMA
+   ============================================================== */
+
+/* Warna latar sidebar per tema (dipakai oleh pembungkus menu) */
+html body.theme-terang    { --menu-bg: #ffffff; }
+html body.theme-gelap     { --menu-bg: #1f2937; }
+html body.theme-hangat    { --menu-bg: #e8d5c4; }
+html body.theme-klasik    { --menu-bg: #2c3a4a; }
+html body.theme-cyberpunk { --menu-bg: #03060c; }
+
+/* 1. Semua pembungkus menu (ul / li / div scroll) = warna sidebar tema, tanpa bayangan/border/outline */
+html body .sidebar,
+html body .sidebar .slimScrollDiv,
+html body .sidebar .scroll-sidebar,
+html body .sidebar .sidebar-nav,
+html body .sidebar .sidebar-nav > ul,
+html body .sidebar .sidebar-nav ul#side-menu,
+html body .sidebar .sidebar-nav ul#side-menu > li,
+html body .sidebar .sidebar-nav ul#side-menu > li.active,
+html body .sidebar .sidebar-nav ul#side-menu > li:hover,
+html body .sidebar .sidebar-nav ul#side-menu > li:focus,
+html body .sidebar .sidebar-nav ul#side-menu > li:focus-within,
+html body .sidebar .sidebar-nav ul#side-menu > li.active:hover {
+    background: var(--menu-bg, transparent) !important;
+    background-color: var(--menu-bg, transparent) !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    filter: none !important;
+    backdrop-filter: none !important;
+}
+
+/* 2. Matikan semua pseudo-element penggambar kotak */
+html body .sidebar .sidebar-nav li::before,
+html body .sidebar .sidebar-nav li::after,
+html body .sidebar .sidebar-nav ul::before,
+html body .sidebar .sidebar-nav ul::after,
+html body .sidebar .sidebar-nav li a::before,
+html body .sidebar .sidebar-nav li a::after,
+html body .sidebar .sidebar-nav li.active a::before,
+html body .sidebar .sidebar-nav li.active a::after {
+    content: none !important;
+    display: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 3. Tombol menu: tanpa bayangan luar yang bisa tampak seperti kotak hitam */
+html body .sidebar .sidebar-nav ul#side-menu li a,
+html body .sidebar .sidebar-nav ul#side-menu li a:focus,
+html body .sidebar .sidebar-nav ul#side-menu li a:active {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 4. Mode wallpaper: biarkan transparan agar gambar tembus */
+html body.has-custom-bg .sidebar .sidebar-nav,
+html body.has-custom-bg .sidebar .sidebar-nav > ul,
+html body.has-custom-bg .sidebar .sidebar-nav ul#side-menu,
+html body.has-custom-bg .sidebar .sidebar-nav ul#side-menu > li,
+html body.has-custom-bg .sidebar .sidebar-nav ul#side-menu > li.active,
+html body.has-custom-bg .sidebar .slimScrollDiv,
+html body.has-custom-bg .sidebar .scroll-sidebar {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 5. Cyberpunk: klik/fokus jangan hijau pekat, tetap senada neon */
+html body.theme-cyberpunk .sidebar-nav ul#side-menu li a:focus,
+html body.theme-cyberpunk .sidebar-nav ul#side-menu li a:active {
+    background: rgba(80, 0, 0, 0.6) !important;
+    box-shadow: 0 0 12px rgba(255, 59, 59, 0.35) !important;
+}
+
+
+/* ==============================================================
+   TABEL MODERN & MEMBULAT (SEMUA TEMA KECUALI CYBERPUNK)
+   ============================================================== */
+
+/* Variabel warna baris per tema */
+html body.theme-terang { --row-bg: #ffffff; --row-hover: #f8fafc; --row-border: #e5e7eb; --row-shadow: rgba(15, 23, 42, 0.06); --row-shadow-hover: rgba(37, 99, 235, 0.14); }
+html body.theme-gelap  { --row-bg: #1f2937; --row-hover: #2b3647; --row-border: #374151; --row-shadow: rgba(0, 0, 0, 0.25); --row-shadow-hover: rgba(96, 165, 250, 0.18); }
+html body.theme-hangat { --row-bg: #fffaf4; --row-hover: #f6e9db; --row-border: #e3cfba; --row-shadow: rgba(92, 61, 30, 0.08); --row-shadow-hover: rgba(140, 98, 68, 0.2); }
+html body.theme-klasik { --row-bg: #2c3a4a; --row-hover: #34465a; --row-border: #1e293b; --row-shadow: rgba(0, 0, 0, 0.2); --row-shadow-hover: rgba(56, 189, 248, 0.18); }
+
+/* Jarak antar baris */
+html body:not(.theme-cyberpunk) #wrapper .table {
+    border-collapse: separate !important;
+    border-spacing: 0 12px !important;
+}
+
+/* Baris (tr): tanpa kotak, biar sel yang menggambar bentuk bulat */
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    clip-path: none !important;
+    box-shadow: none !important;
+    border-radius: 14px !important;
+    transition: transform 0.2s ease, filter 0.2s ease !important;
+}
+
+/* Sel (td): latar + garis atas/bawah sesuai tema */
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr > td {
+    background: var(--row-bg) !important;
+    background-color: var(--row-bg) !important;
+    border-top: 1px solid var(--row-border) !important;
+    border-bottom: 1px solid var(--row-border) !important;
+    border-left: none !important;
+    border-right: none !important;
+    box-shadow: 0 4px 10px -4px var(--row-shadow) !important;
+    padding: 18px 16px !important;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Sudut membulat di kiri (sel pertama) dan kanan (sel terakhir) */
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr > td:first-child {
+    border-left: 1px solid var(--row-border) !important;
+    border-top-left-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+}
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr > td:last-child {
+    border-right: 1px solid var(--row-border) !important;
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+}
+
+/* Hover: sedikit terangkat */
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr:hover {
+    transform: translateY(-2px) !important;
+    clip-path: none !important;
+}
+html body:not(.theme-cyberpunk) #wrapper .table > tbody > tr:hover > td {
+    background: var(--row-hover) !important;
+    background-color: var(--row-hover) !important;
+    box-shadow: 0 8px 16px -6px var(--row-shadow-hover) !important;
+}
+
+/* Header kolom: tetap rapi, tanpa kotak */
+html body:not(.theme-cyberpunk) #wrapper .table thead th {
+    background: transparent !important;
+    border: none !important;
+}
+
+
+/* ==============================================================
+   REDESAIN HALAMAN DETAIL MATA KULIAH + FONT PER TEMA
+   ============================================================== */
+
+/* ---- Variabel tema: aksen, teks, font ---- */
+html body.theme-terang {
+    --accent: #2563eb; --accent-ink: #ffffff; --txt: #111827; --muted: #6b7280;
+    --font-head: "Inter", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+html body.theme-gelap {
+    --accent: #60a5fa; --accent-ink: #0b1220; --txt: #f3f4f6; --muted: #9ca3af;
+    --font-head: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+    --font-body: "Plus Jakarta Sans", "Segoe UI", system-ui, sans-serif;
+}
+html body.theme-hangat {
+    --accent: #8c6244; --accent-ink: #ffffff; --txt: #3d2f23; --muted: #7a634d;
+    --font-head: "Lora", Georgia, serif;
+    --font-body: "Nunito", "Segoe UI", system-ui, sans-serif;
+}
+html body.theme-klasik {
+    --accent: #38bdf8; --accent-ink: #0f172a; --txt: #f1f5f9; --muted: #94a3b8;
+    --font-head: "Merriweather", Georgia, serif;
+    --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+}
+html body.theme-cyberpunk {
+    --accent: #00f0ff; --accent-ink: #03060c; --txt: #e2e8f0; --muted: #8da5c7;
+    --row-bg: rgba(5, 15, 30, 0.78); --row-hover: rgba(0, 240, 255, 0.08); --row-border: rgba(0, 240, 255, 0.3);
+    --row-shadow: rgba(0, 0, 0, 0.4);
+    --font-head: "Orbitron", "Segoe UI", sans-serif;
+    --font-body: "Rajdhani", "Segoe UI", sans-serif;
+}
+
+/* ---- Font (ikon tidak disentuh: <i> dan span ikon dibiarkan) ---- */
+html body[class*="theme-"], html body[class*="theme-"] p, html body[class*="theme-"] td, html body[class*="theme-"] th,
+html body[class*="theme-"] li, html body[class*="theme-"] a, html body[class*="theme-"] label, html body[class*="theme-"] small,
+html body[class*="theme-"] input, html body[class*="theme-"] select, html body[class*="theme-"] textarea,
+html body[class*="theme-"] button, html body[class*="theme-"] .btn {
+    font-family: var(--font-body) !important;
+}
+html body[class*="theme-"] h1, html body[class*="theme-"] h2, html body[class*="theme-"] h3,
+html body[class*="theme-"] h4, html body[class*="theme-"] h5, html body[class*="theme-"] h6,
+html body[class*="theme-"] .box-title, html body[class*="theme-"] .panel-title,
+html body[class*="theme-"] .user-profile .profile-text,
+html body[class*="theme-"] .spot-hero :is(b, strong),
+html body[class*="theme-"] .spot-bar :is(b, strong) {
+    font-family: var(--font-head) !important;
+}
+html body.theme-cyberpunk h1, html body.theme-cyberpunk h2, html body.theme-cyberpunk h3,
+html body.theme-cyberpunk h4, html body.theme-cyberpunk h5, html body.theme-cyberpunk h6 { letter-spacing: 1.5px !important; }
+
+/* ---- Teks deskripsi ---- */
+html body[class*="theme-"] #page-wrapper p { color: var(--txt) !important; line-height: 1.8 !important; font-size: 15px !important; }
+
+/* ---- Banner judul mata kuliah (hero) ---- */
+html body[class*="theme-"] .spot-hero {
+    background: var(--row-bg) !important; background-image: none !important;
+    border: 1px solid var(--row-border) !important;
+    border-left: 6px solid var(--accent) !important;
+    border-radius: 18px !important;
+    box-shadow: 0 10px 24px -12px var(--row-shadow) !important;
+}
+html body[class*="theme-"] .spot-hero > * { background: transparent !important; }
+html body[class*="theme-"] .spot-hero,
+html body[class*="theme-"] .spot-hero :is(h1, h2, h3, h4, h5, h6, p, div, span, small, a, label, b, strong) { color: var(--txt) !important; text-shadow: none !important; }
+html body[class*="theme-"] .spot-hero :is(h1, h2, h3, h4, h5, h6) { font-weight: 700 !important; }
+html body[class*="theme-"] .spot-hero i, html body[class*="theme-"] .spot-hero [class*="fa-"] { color: var(--accent) !important; }
+
+/* ---- Bar pertemuan (accordion): satu gaya, rapi, tanpa selang-seling biru/cyan ---- */
+html body[class*="theme-"] .spot-bar {
+    background: var(--row-bg) !important; background-image: none !important;
+    border: 1px solid var(--row-border) !important;
+    border-radius: 14px !important;
+    box-shadow: inset 5px 0 0 var(--accent), 0 4px 12px -6px var(--row-shadow) !important;
+    transition: background-color .2s ease, transform .2s ease !important;
+}
+html body[class*="theme-"] .spot-bar > * { background: transparent !important; }
+html body[class*="theme-"] .spot-bar:hover { background: var(--row-hover) !important; transform: translateY(-1px); }
+html body[class*="theme-"] .spot-bar,
+html body[class*="theme-"] .spot-bar :is(a, h1, h2, h3, h4, h5, h6, div, span, small, label, b, strong) { color: var(--txt) !important; text-shadow: none !important; }
+html body[class*="theme-"] .spot-bar i, html body[class*="theme-"] .spot-bar [class*="fa-"], html body[class*="theme-"] .spot-bar [class*="ti-"] { color: var(--accent) !important; }
+
+/* ---- Tombol aksi (Detail, dll.) ---- */
+html body[class*="theme-"] .btn-info, html body[class*="theme-"] .btn-primary,
+html body[class*="theme-"] .btn-success, html body[class*="theme-"] .spot-chip {
+    background: var(--accent) !important; background-image: none !important;
+    color: var(--accent-ink) !important; border: none !important;
+    border-radius: 10px !important; font-weight: 600 !important;
+    box-shadow: none !important; text-shadow: none !important;
+}
+html body[class*="theme-"] .btn-info:hover, html body[class*="theme-"] .btn-primary:hover,
+html body[class*="theme-"] .btn-success:hover, html body[class*="theme-"] .spot-chip:hover { filter: brightness(1.1); }
+
+/* ---- Chip "Waktu Akses" ---- */
+html body[class*="theme-"] .spot-meta {
+    background: var(--row-hover) !important; background-image: none !important;
+    color: var(--muted) !important; border: 1px solid var(--row-border) !important;
+    border-radius: 10px !important; box-shadow: none !important;
+}
+
+/* ---- CYBERPUNK: tetap tajam & neon ---- */
+html body.theme-cyberpunk .spot-hero {
+    border-radius: 0 !important; border-left: 5px solid #ff3b3b !important;
+    clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px) !important;
+    box-shadow: none !important;
+}
+html body.theme-cyberpunk .spot-hero :is(h1, h2, h3, h4, h5, h6) { text-shadow: 0 0 10px rgba(255, 59, 59, 0.6) !important; color: #ffffff !important; }
+html body.theme-cyberpunk .spot-hero i { color: #ff3b3b !important; }
+
+html body.theme-cyberpunk .spot-bar {
+    border-radius: 0 !important; box-shadow: none !important;
+    border: 1px solid rgba(0, 240, 255, 0.25) !important;
+    border-left: 4px solid var(--accent) !important;
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px) !important;
+}
+html body.theme-cyberpunk .spot-bar-odd  { --accent: #ff3b3b; border-color: rgba(255, 59, 59, 0.3) !important; }
+html body.theme-cyberpunk .spot-bar-even { --accent: #00f0ff; }
+html body.theme-cyberpunk .spot-bar:hover { transform: none !important; background: rgba(0, 255, 100, 0.06) !important; }
+html body.theme-cyberpunk .spot-bar :is(a, h1, h2, h3, h4, h5, h6, span, b, strong) { text-shadow: 0 0 6px var(--accent) !important; }
+
+html body.theme-cyberpunk .btn-info, html body.theme-cyberpunk .btn-primary,
+html body.theme-cyberpunk .btn-success, html body.theme-cyberpunk .spot-chip {
+    background: transparent !important; color: #00f0ff !important;
+    border: 1px solid #00f0ff !important; border-radius: 0 !important;
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px) !important;
+    text-shadow: 0 0 6px #00f0ff !important;
+}
+html body.theme-cyberpunk .btn-info:hover, html body.theme-cyberpunk .btn-primary:hover,
+html body.theme-cyberpunk .btn-success:hover, html body.theme-cyberpunk .spot-chip:hover {
+    background: rgba(0, 240, 255, 0.15) !important; filter: none;
+}
+html body.theme-cyberpunk .spot-meta {
+    border-radius: 0 !important; background: rgba(0, 240, 255, 0.06) !important;
+    border: 1px solid rgba(0, 240, 255, 0.25) !important; color: #8da5c7 !important;
+}
+
+
+/* ==============================================================
+   HALAMAN TOPIK / PERTEMUAN: TAB, DROPDOWN, PANEL, TEKS TERBACA
+   ============================================================== */
+
+/* ---- Warna teks dasar halaman (spesifisitas rendah agar komponen lain tetap menang) ---- */
+html body[class*="theme-"] :where(#page-wrapper) :where(p, li, label, td, th, dd, dt, small, span, div, em, b, strong) { color: var(--txt); }
+html body[class*="theme-"] :where(#page-wrapper) :where(.text-muted, .help-block, .text-secondary) { color: var(--muted) !important; }
+html body[class*="theme-"] :where(#page-wrapper) :where(hr) { border-color: var(--row-border) !important; }
+html body[class*="theme-"] footer, html body[class*="theme-"] .footer {
+    color: var(--muted) !important; background: transparent !important; border: none !important; box-shadow: none !important;
+}
+html body[class*="theme-"] ::selection { background: var(--accent); color: var(--accent-ink); }
+
+/* ---- Panel besar (mis. blok "PERTEMUAN 3") ---- */
+html body[class*="theme-"] .spot-panel {
+    background: var(--row-bg) !important; background-image: none !important;
+    border: 1px solid var(--row-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 20px -12px var(--row-shadow) !important;
+}
+html body[class*="theme-"] .spot-panel :is(h1, h2, h3, h4, h5, h6) { color: var(--txt) !important; text-shadow: none !important; }
+
+/* ---- Chip "Waktu Akses": rapi, tidak melebar penuh ---- */
+html body[class*="theme-"] .spot-meta {
+    display: inline-block !important; width: fit-content !important; max-width: 100% !important;
+    padding: 6px 16px !important; font-size: 13px !important; font-weight: 600 !important;
+    color: var(--muted) !important;
+}
+
+/* ---- Tab (Beranda, Bahan Ajar, Tugas, ...) ---- */
+html body[class*="theme-"] .nav-tabs {
+    border-bottom: 1px solid var(--row-border) !important; background: transparent !important;
+}
+html body[class*="theme-"] .nav-tabs > li > a {
+    background: transparent !important; background-image: none !important;
+    color: var(--muted) !important; font-weight: 600 !important;
+    border: 1px solid transparent !important; border-bottom: 3px solid transparent !important;
+    border-radius: 12px 12px 0 0 !important; box-shadow: none !important; text-shadow: none !important;
+}
+html body[class*="theme-"] .nav-tabs > li > a * { color: inherit !important; }
+html body[class*="theme-"] .nav-tabs > li > a:hover, html body[class*="theme-"] .nav-tabs > li > a:focus {
+    background: var(--row-hover) !important; color: var(--txt) !important; border-bottom-color: var(--row-border) !important;
+}
+html body[class*="theme-"] .nav-tabs > li.active > a,
+html body[class*="theme-"] .nav-tabs > li.active > a:hover,
+html body[class*="theme-"] .nav-tabs > li.active > a:focus {
+    background: var(--row-bg) !important; color: var(--accent) !important;
+    border: 1px solid var(--row-border) !important; border-bottom: 3px solid var(--accent) !important;
+}
+
+/* ---- Dropdown pilih pertemuan & kolom isian ---- */
+html body[class*="theme-"] select,
+html body[class*="theme-"] .form-control,
+html body[class*="theme-"] .select2-container--default .select2-selection--single,
+html body[class*="theme-"] .bootstrap-select > .dropdown-toggle {
+    background-color: var(--row-bg) !important; background-image: none !important;
+    color: var(--txt) !important; border: 1px solid var(--row-border) !important;
+    border-radius: 12px !important; box-shadow: none !important; font-weight: 600 !important;
+}
+html body[class*="theme-"] select:focus, html body[class*="theme-"] .form-control:focus {
+    border-color: var(--accent) !important; outline: none !important;
+}
+html body[class*="theme-"] .select2-selection__rendered { color: var(--txt) !important; }
+html body[class*="theme-"] .select2-selection__arrow b { border-top-color: var(--muted) !important; }
+html body[class*="theme-"] .select2-dropdown { background: var(--row-bg) !important; border: 1px solid var(--row-border) !important; border-radius: 12px !important; overflow: hidden; }
+html body[class*="theme-"] .select2-results__option { color: var(--txt) !important; background: transparent !important; }
+html body[class*="theme-"] .select2-results__option--highlighted, html body[class*="theme-"] .select2-results__option[aria-selected="true"] {
+    background: var(--accent) !important; color: var(--accent-ink) !important;
+}
+html body[class*="theme-"] option { background: var(--row-bg); color: var(--txt); }
+
+/* ---- Kotak info / kutipan (garis biru di kiri) ---- */
+html body[class*="theme-"] .alert, html body[class*="theme-"] .well, html body[class*="theme-"] .callout,
+html body[class*="theme-"] blockquote {
+    background: var(--row-bg) !important; background-image: none !important;
+    color: var(--txt) !important; border: 1px solid var(--row-border) !important;
+    border-left: 5px solid var(--accent) !important; border-radius: 12px !important; box-shadow: none !important;
+}
+html body[class*="theme-"] .alert *, html body[class*="theme-"] blockquote * { color: inherit !important; }
+
+/* ---- CYBERPUNK: versi tajam & neon ---- */
+html body.theme-cyberpunk .spot-panel {
+    border-radius: 0 !important; box-shadow: none !important;
+    clip-path: polygon(16px 0, 100% 0, 100% calc(100% - 16px), calc(100% - 16px) 100%, 0 100%, 0 16px) !important;
+}
+html body.theme-cyberpunk .spot-panel :is(h1, h2, h3, h4, h5, h6) { text-shadow: 0 0 8px rgba(0, 240, 255, 0.5) !important; }
+html body.theme-cyberpunk .nav-tabs > li > a { border-radius: 0 !important; }
+html body.theme-cyberpunk .nav-tabs > li.active > a,
+html body.theme-cyberpunk .nav-tabs > li.active > a:hover,
+html body.theme-cyberpunk .nav-tabs > li.active > a:focus {
+    background: rgba(0, 240, 255, 0.08) !important; color: #00f0ff !important;
+    border: 1px solid rgba(0, 240, 255, 0.3) !important; border-bottom: 3px solid #ff3b3b !important;
+    text-shadow: 0 0 8px #00f0ff !important;
+}
+html body.theme-cyberpunk select, html body.theme-cyberpunk .form-control,
+html body.theme-cyberpunk .select2-container--default .select2-selection--single { border-radius: 0 !important; border-color: rgba(0, 240, 255, 0.4) !important; }
+html body.theme-cyberpunk .alert, html body.theme-cyberpunk .well, html body.theme-cyberpunk .callout,
+html body.theme-cyberpunk blockquote { border-radius: 0 !important; border-left-color: #ff3b3b !important; }
