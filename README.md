@@ -1,6 +1,3 @@
-<img width="1902" height="1090" alt="image" src="https://github.com/user-attachments/assets/89e7099e-f319-4ad9-978a-8058aa58fc77" />
-<img width="1902" height="1088" alt="image" src="https://github.com/user-attachments/assets/830b709d-d1f0-43d3-9555-237473def971" />
-
 
 # SPOT UPI - Custom Theme & Wallpaper
 
@@ -26,4 +23,4 @@ This browser extension version 4.0 is specifically designed to modify and beauti
 
 ## Preview
 
-To see the result of the SPOT UPI interface with the custom dark/blue theme applied to the course list, you can review the screenshot reference in the file image_bdc9fd.png. Additionally, an alternative preview or comparison is also available to view directly in the file watermarked_img_7581654596912237771.jpg.
+<img width="1902" height="1088" alt="image" src="https://github.com/user-attachments/assets/830b709d-d1f0-43d3-9555-237473def971" />
