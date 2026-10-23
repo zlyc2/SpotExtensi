@@ -1,5 +1,5 @@
 
-# SPOT UPI - Custom Theme & Wallpaper
+# WEB SPOT UPI - Custom Theme & Wallpaper UI
 
 This browser extension version 4.0 is specifically designed to modify and beautify the interface of the Integrated Online Learning System (SPOT) of Universitas Pendidikan Indonesia on the `spot.upi.edu` website. This extension transforms the default look into a modern UI that is more comfortable for daily activities.
 
